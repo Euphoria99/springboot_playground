@@ -1,3 +1,16 @@
 Some actuator endpoints
 
 health,info,beans,threaddump,mappings
+
+
+note use command prompt for this
+
+running app from command line 
+
+1)mvnw package
+2)java -jar package/name-of-the-jar
+
+
+Run the app using spring boot maven plugin
+
+mvnw spring-boot:run
