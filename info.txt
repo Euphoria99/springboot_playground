@@ -14,3 +14,13 @@ running app from command line
 Run the app using spring boot maven plugin
 
 mvnw spring-boot:run
+
+For linux/mac
+
+1) ./mvnw package
+
+2)java -jar package/name-of-the-jar
+
+Run the app using spring boot maven plugin
+
+./mvnw spring-boot:run
