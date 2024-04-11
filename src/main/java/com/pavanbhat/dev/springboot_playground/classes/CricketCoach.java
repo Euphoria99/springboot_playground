@@ -9,4 +9,9 @@ public class CricketCoach implements Coach {
     public String getDailyPractice(){
         return "Practice batting for 15 minutes!!";
     }
+    @Override
+    public String getWorkoutPractice(){
+        return "Practice Deadlifts";
+    }
+
 }

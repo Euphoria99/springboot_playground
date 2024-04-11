@@ -16,7 +16,16 @@ public class DailyPracticeController {
     }
 
     @GetMapping("/dailypractice")
+    public String getPracticeController(){
+        return "To see what you need to do daily, use /cricket or /workout succeeding /dailypractice";
+    }
+    @GetMapping("/dailypractice/cricket")
     public String getDailyPracticeController(){
         return myCoach.getDailyPractice();
+    }
+
+    @GetMapping("/dailypractice/workout")
+    public String getDailyWorkoutController(){
+        return myCoach.getWorkoutPractice();
     }
 }
