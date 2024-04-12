@@ -1,6 +1,6 @@
-package com.pavanbhat.dev.utils.classes;
+package com.pavanbhat.dev.springboot_playground.classes;
 
-import com.pavanbhat.dev.utils.interfaces.Coach;
+import com.pavanbhat.dev.springboot_playground.interfaces.Coach;
 import org.springframework.stereotype.Component;
 
 @Component

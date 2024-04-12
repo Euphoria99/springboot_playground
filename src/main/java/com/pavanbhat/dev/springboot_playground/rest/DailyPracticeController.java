@@ -1,6 +1,6 @@
 package com.pavanbhat.dev.springboot_playground.rest;
 
-import com.pavanbhat.dev.utils.interfaces.Coach;
+import com.pavanbhat.dev.springboot_playground.interfaces.Coach;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

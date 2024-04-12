@@ -1,4 +1,4 @@
-package com.pavanbhat.dev.utils.interfaces;
+package com.pavanbhat.dev.springboot_playground.interfaces;
 
 public interface Coach {
     String getDailyPractice();
