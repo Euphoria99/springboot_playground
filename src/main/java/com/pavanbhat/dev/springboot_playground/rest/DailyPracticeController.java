@@ -12,7 +12,8 @@ public class DailyPracticeController {
     //define a private field for the dependency
     private Coach myCoach;
     @Autowired
-    public DailyPracticeController(Coach theCoach){
+    public DailyPracticeController(@Qualifier("trackCoach") Coach theCoach){
+        System.out.println("In Constructor " + getClass().getSimpleName());
         myCoach = theCoach;
     }
 
