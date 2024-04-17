@@ -12,7 +12,7 @@ public class DailyPracticeController {
     //define a private field for the dependency
     private Coach myCoach;
     @Autowired
-    public DailyPracticeController(@Qualifier("trackCoach") Coach theCoach){
+    public DailyPracticeController(Coach theCoach){
         myCoach = theCoach;
     }
 
