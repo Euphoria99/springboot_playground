@@ -1,12 +1,12 @@
 package com.pavanbhat.dev.springboot_playground.classes;
 
 import com.pavanbhat.dev.springboot_playground.interfaces.Coach;
-import org.springframework.context.annotation.Lazy;
+//import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 
 
 @Component
-@Lazy
+//@Lazy
 public class TennisCoach implements  Coach{
 
     public TennisCoach(){
