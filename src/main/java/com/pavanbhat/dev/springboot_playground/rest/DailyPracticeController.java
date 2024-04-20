@@ -13,7 +13,7 @@ public class DailyPracticeController {
     private Coach myCoach;
 
     @Autowired
-    public DailyPracticeController(@Qualifier("trackCoach") Coach theCoach){
+    public DailyPracticeController(@Qualifier("aquatic") Coach theCoach){
         System.out.println("In Constructor " + getClass().getSimpleName());
         myCoach = theCoach;
     }

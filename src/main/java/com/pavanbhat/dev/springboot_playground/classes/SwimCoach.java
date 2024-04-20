@@ -1,18 +1,17 @@
 package com.pavanbhat.dev.springboot_playground.classes;
 
 import com.pavanbhat.dev.springboot_playground.interfaces.Coach;
-import org.springframework.stereotype.Component;
 
+//we will not use @Component here this time
+public class SwimCoach implements Coach {
 
-@Component
-public class TrackCoach implements Coach {
-
-    public TrackCoach(){
+    public SwimCoach(){
         System.out.println("In Constructor " + getClass().getSimpleName());
     }
 
     @Override
     public String getDailyPractice(){
-        return "Take 10 laps of running";
+        return "Swim for 15 minutes";
     }
+
 }
