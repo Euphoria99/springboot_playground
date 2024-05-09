@@ -28,9 +28,27 @@ public class SpringbootPlaygroundApplication {
 	public CommandLineRunner commandLineRunner(StudentDAO studentDAO){
 
 	return runner -> {
-		createStudent(studentDAO);
+//		createStudent(studentDAO);
+
+		createMultipeStudent(studentDAO);
 	};
 
+	}
+
+	private void createMultipeStudent(StudentDAO studentDAO){
+
+		//create the student object
+		System.out.println("Creating new student object...");
+		Student tempStudent1 = new Student("Vin","Diesel", "vindiesel@fastnfurious.com");
+		Student tempStudent2 = new Student("Sung","Kang", "sungkang@fastnfurious.com");
+		Student tempStudent3 = new Student("Sung","Kang", "sungkang@fastnfurious.com");
+
+
+		//save the student object
+		System.out.println("Saving the student....");
+		studentDAO.save(tempStudent1);
+		studentDAO.save(tempStudent2);
+		studentDAO.save(tempStudent3);
 	}
 
 	private void createStudent(StudentDAO studentDAO) {
