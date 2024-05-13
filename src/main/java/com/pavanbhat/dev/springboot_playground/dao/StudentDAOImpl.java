@@ -2,9 +2,12 @@ package com.pavanbhat.dev.springboot_playground.dao;
 
 import com.pavanbhat.dev.springboot_playground.entity.Student;
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.TypedQuery;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
 
 //s2.2: JPA annotations; entity manager
 @Repository
@@ -31,5 +34,17 @@ public class StudentDAOImpl implements StudentDAO {
     @Override
     public Student findById(Integer id) {
         return entityManager.find(Student.class, 1);
+    }
+
+    @Override
+    public List<Student> findAll() {
+       //create query
+
+        TypedQuery<Student> theQuery = entityManager.createQuery("FROM Student", Student.class);
+
+        //return query results
+
+
+        return theQuery.getResultList();
     }
 }
