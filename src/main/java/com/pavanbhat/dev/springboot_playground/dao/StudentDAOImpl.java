@@ -42,6 +42,12 @@ public class StudentDAOImpl implements StudentDAO {
 
         TypedQuery<Student> theQuery = entityManager.createQuery("FROM Student", Student.class);
 
+        //order by desc
+        //TypedQuery<Student> theQuery = entityManager.createQuery("FROM Student order by lastName desc", Student.class);
+
+        // order by asc (asc is default for 'order by')
+        // TypedQuery<Student> theQuery = entityManager.createQuery("FROM Student order by lastName desc", Student.class);
+
         //return query results
 
 
