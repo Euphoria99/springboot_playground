@@ -43,3 +43,7 @@ mysqld --init-file=C:\change_mysql_pwd.txt
 check mysql service status in powershell
 
 Get-Service -Name 'mysql*'
+
+*Pointer*
+
+CRUD -> CU needs @Transactional

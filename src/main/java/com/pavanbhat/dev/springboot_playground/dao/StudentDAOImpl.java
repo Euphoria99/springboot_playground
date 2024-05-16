@@ -13,18 +13,16 @@ import java.util.List;
 @Repository
 public class StudentDAOImpl implements StudentDAO {
 
-    //define field for entity manager
+    // define field for entity manager
     private EntityManager entityManager;
 
-
-    //inject entity manager using constructor injection
-
-
+    // inject entity manager using constructor injection
     @Autowired
     public StudentDAOImpl(EntityManager entityManager) {
         this.entityManager = entityManager;
     }
 
+    // implement save method
     @Override
     @Transactional
     public void save(Student theStudent) {
@@ -33,24 +31,15 @@ public class StudentDAOImpl implements StudentDAO {
 
     @Override
     public Student findById(Integer id) {
-        return entityManager.find(Student.class, 1);
+        return entityManager.find(Student.class, id);
     }
 
     @Override
     public List<Student> findAll() {
-       //create query
-
+        // create query
         TypedQuery<Student> theQuery = entityManager.createQuery("FROM Student", Student.class);
 
-        //order by desc
-        //TypedQuery<Student> theQuery = entityManager.createQuery("FROM Student order by lastName desc", Student.class);
-
-        // order by asc (asc is default for 'order by')
-        // TypedQuery<Student> theQuery = entityManager.createQuery("FROM Student order by lastName desc", Student.class);
-
-        //return query results
-
-
+        // return query results
         return theQuery.getResultList();
     }
 
@@ -66,4 +55,11 @@ public class StudentDAOImpl implements StudentDAO {
         // return query results
         return theQuery.getResultList();
     }
+
+    @Override
+    @Transactional
+    public void update(Student theStudent) {
+        entityManager.merge(theStudent);
+    }
+
 }
