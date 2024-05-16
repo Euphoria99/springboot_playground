@@ -11,9 +11,8 @@ import java.util.List;
 
 //s2.2: JPA annotations; entity manager
 @Repository
-public class StudentDAOImpl implements StudentDAO {
+public class StudentDAOImpl  implements StudentDAO {
 
-    // define field for entity manager
     private EntityManager entityManager;
 
     // inject entity manager using constructor injection
@@ -22,18 +21,21 @@ public class StudentDAOImpl implements StudentDAO {
         this.entityManager = entityManager;
     }
 
-    // implement save method
+    //implement save method
     @Override
     @Transactional
     public void save(Student theStudent) {
         entityManager.persist(theStudent);
     }
 
+    //implement find by id method
     @Override
     public Student findById(Integer id) {
         return entityManager.find(Student.class, id);
     }
 
+
+    //implement find all method
     @Override
     public List<Student> findAll() {
         // create query
@@ -43,6 +45,7 @@ public class StudentDAOImpl implements StudentDAO {
         return theQuery.getResultList();
     }
 
+    //implement find by last name method
     @Override
     public List<Student> findByLastName(String theLastName) {
         // create query
@@ -56,10 +59,29 @@ public class StudentDAOImpl implements StudentDAO {
         return theQuery.getResultList();
     }
 
+    //implement update method
     @Override
     @Transactional
     public void update(Student theStudent) {
         entityManager.merge(theStudent);
     }
 
+    //implement delete method
+    @Override
+    @Transactional
+    public void delete(Integer id) {
+        //retrieve the student
+        Student theStudent = entityManager.find(Student.class, id);
+
+        //delete the student
+        entityManager.remove(theStudent);
+    }
+
+    //implement delete method
+    @Override
+    @Transactional
+    public int deleteAll() {
+        int numRowsDeleted = entityManager.createQuery("DELETE FROM Student").executeUpdate();
+        return numRowsDeleted;
+    }
 }
