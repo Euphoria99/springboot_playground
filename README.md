@@ -41,3 +41,6 @@ mvnw spring-boot:run
 ```
 
 This command will start the Spring Boot application directly from the project directory.
+
+1st-cruddemo
+2nd-demo
