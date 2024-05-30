@@ -1,0 +1,17 @@
+module: demo 
+
+1) Create Java POJO
+
+define fields
+define constructor
+define getter & setters
+define toString()
+
+2) Create Rest Controller
+
+@RestController, @RequestMapping,  @PostConstruct , @GetMapping
+
+define @PostConstruct to load the students data..only once
+
+define an endpoint
+

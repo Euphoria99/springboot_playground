@@ -1,0 +1,68 @@
+creating rest api dao
+
+1. create employee entity
+2. create DAO interface
+3. create DAO implementation
+4. create rest controller to use DAO
+
+
+1) Define Entity Class
+
+@Entity , @Table, @Id, @GeneratedValue, @Column
+define fields
+define constructor
+define getter & setters
+define toString()
+
+2) Define DAO interface
+
+deine methods like   save/read/querying/updating/deleting
+   
+3) Define DAO implementation
+
+@Repository, @Autowired, @Override, @Transactional
+
+define field for entitymanager
+
+set up constructor injection
+
+implenet the above methods
+
+
+4) create rest controller to use DAO
+
+@RestController, @RequestMapping, @GetMapping
+
+2 ways from here 
+
+without service
+
+define field 
+inject dao into the constructor
+expose getmapping and return dao with methd
+
+
+
+with service
+
+create service interface
+create service implementation
+
+update the rest controller with getmapping
+
+define field 
+inject service into the constructor
+expose getmapping/postmapping and return data
+
+best practice : use @Transactional in Service layer and not directly in
+
+
+
+
+
+
+
+
+
+
+

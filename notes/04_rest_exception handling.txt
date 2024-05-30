@@ -1,0 +1,31 @@
+module: demo 
+
+1) create a custom error response Class 
+
+- This is defined as POJO
+
+- SometingErrorResponse.java
+
+2) create a custom exception Class
+
+- This extends Runtimeexception 
+
+- generate exceptions 
+
+- SometingNotFoundException.java
+
+3) update REST service to throw exception if object not found
+
+- SometingRestController.java
+
+
+4) Add an exception handler method 
+
+- Define exception handler method using @ExceptionHandler annotation
+
+- will return response entity. 
+
+- It is wrapper of the HTTP response object.
+
+- Response Entity provides fine-grained control to specify like status code, headers and response body.
+

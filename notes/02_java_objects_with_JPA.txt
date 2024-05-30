@@ -1,0 +1,40 @@
+module: cruddemo
+
+1) Define Entity Class
+
+@Entity , @Table, @Id, @GeneratedValue, @Column
+define fields
+define constructor
+define getter & setters
+define toString()
+
+2) Define DAO interface
+
+deine methods like   save/read/querying/updating/deleting
+   
+3) Define DAO implementation
+
+@Repository, @Autowired, @Override, @Transactional
+
+define field for entitymanager
+
+set up constructor injection
+
+implenet the above methods 
+
+methods like create, update and delete needs @Transactional since they are making changes in db.
+
+
+4) Update the main app
+
+@Bean
+
+create command line runner
+
+define method and return the method in command line runner
+
+
+
+
+
+
