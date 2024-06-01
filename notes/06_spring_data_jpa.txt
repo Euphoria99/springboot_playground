@@ -1,0 +1,13 @@
+module: spring_data_jpa
+
+1) create somethingRepository.java
+
+- extend JpaRepository interface,ie JpaRepository<EntityName, DataType>
+
+2) use the repository in the SomethingServiceImpl.java
+
+- set the field
+
+- set up constructor injection
+
+- return the data using methods from repository.

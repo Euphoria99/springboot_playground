@@ -1,3 +1,5 @@
+module: spring_data_jpa
+
 creating rest api dao
 
 1. create employee entity
@@ -39,7 +41,7 @@ without service
 
 define field 
 inject dao into the constructor
-expose getmapping and return dao with methd
+expose getmapping and return dao with method
 
 
 
