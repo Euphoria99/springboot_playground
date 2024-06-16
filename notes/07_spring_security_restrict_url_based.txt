@@ -1,0 +1,12 @@
+
+1. create a bean with 'SecurityFilterChain' and inject 'HttpSecurity'
+
+2. we then use  authorizeHttpRequests.
+
+3. define a lambda expression with 'configurer'
+
+4. then use requestMatchers() with Http Methods and use .hasRole() to verify roles.
+
+5. use HTTP Basic authentication
+
+6. disable Cross Site Request Forgery (CSRF)
