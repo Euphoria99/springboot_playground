@@ -1,0 +1,19 @@
+
+1. Develop SQL Script to set up database tables
+
+2. Add Database support to Maven POM file
+
+3. Create JDBC properties file
+
+spring.datasource.url=jdbc:mysql://127.0.0.1:3306/employee_directory
+spring.datasource.username=springstudent
+spring.datasource.password=springstudent
+spring.jpa.database-platform=org.hibernate.dialect.MySQL8Dialect
+
+
+4. Update Spring Security to use JDBC
+
+- Inject datasource autoconfigured by springboot
+
+- tell spring security to use JDBC authentication with our data source
+    return new JdbcUserDetailsManager(datasource)
